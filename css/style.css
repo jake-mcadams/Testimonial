@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    background-color: hsl(0, 0%, 81%);
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-content);
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+    "box1 box1 box2 box5"
+    "box3 box4 box4 box5";
+    justify-content: center;
+    /* align-items: center; */
+    margin: auto;
+    grid-gap: 20px;
+    width: 75%;
+    position: relative;
+    top: 125px;
+}
+
+main > div{
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 100%;
+    box-shadow: 10px 10px 10px grey;
+    max-width: 100%;
+    max-height: 100%;
+    word-wrap: break-word;
+}
+
+
+img {
+    width: 35px;
+    height: 35px;
+    border: 2px solid hsl(263, 87%, 79%);
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.graduate {
+    display: flex;
+    flex-direction: row;
+}
+
+/* container 1 */
+
+.test1 {
+    background-color: hsl(263, 55%, 52%);
+    grid-area: box1;
+    /* z-index: ; */
+    word-wrap: normal;
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position:75% 15%;
+    background-size: 125px 125px;
+    word-wrap: break-word;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* .random {
+    float: right;
+    width: 125px;
+    height: 125px;
+    /* position: relative; */
+    
+    /* z-index: 90 */
+
+
+/* container 2 */
+
+.test2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: box2;
+    width: 350px;
+}
+
+.test2 .header {
+    color: hsl(0, 0%, 100%);
+}
+
+/* container 3 */
+
+.test3 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: box3;
+    /* max-height: 350px; */
+}
+
+.test3 .big-quote{
+    color: hsl(219, 29%, 14%);
+}
+
+.test3 .little-quote {
+    color: hsl(217, 19%, 35%);
+}
+
+.test3 .name {
+    color: black;
+}
+
+/* container 4 */
+
+.test4 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: box4;
+    /* height: 350px; */
+}
+
+.test4 .head {
+    color: hsl(0, 0%, 100%);
+}
+
+/* container 5 */
+
+.test5 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: box5;
+    width: 300px;
+    /* height: 795px; */
+}
+
+.test5 .big-quote{
+    color: hsl(219, 29%, 14%);
+}
+.test5 .little-quote {
+    color: hsl(217, 19%, 35%);
+    /* text-align: left; */
+    height: 100%;
+}
+
+.test5 .name {
+    color: black;
+}
+
+
+/* quotes */
+
+.name {
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+}
+
+.verified {
+    font-size: 12px;
+    font-weight: 600;
+    color: hsl(0, 0%, 81%);
+}
+
+.big-quote {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: hsl(210, 46%, 95%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.little-quote {
+    font-size: 1em;
+    color: hsl(0, 0%, 81%);
+    font-weight: 400;
+    max-width: 100%;
+    max-height: 100%;
+    word-wrap: break-word;
+}
+
+/* media quieries*/
+
+@media (max-device-width: 1335px) {
+   main {
+       /* grid-template-columns: repeat(auto-fit, min-content); */
+       grid-template-areas:
+       "box1"
+       "box2"
+       "box3"
+       "box4"
+       "box5";
+       justify-content: center;
+       grid-template-rows: min-content;
+   }
+
+   main > div {
+       width: 100%;
+       height: 100%;
+   }
+
+   .test5 {
+       width: 100%;
+   }
+
+   .test2 {
+       width: 100%;
+   }
+
+   .test1 {
+    background-size: 100px 100px;
+   }
+}
+@media (max-device-width: 768px){
+    .big-quote {
+        font-size: 1em;
+    }
+
+    .little-quote {
+        font-size: .8em;
+    }
+
+    main > div {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-device-width: 480px){
+    .big-quote {
+        font-size: 1em;
+    }
+
+    .little-quote {
+        font-size: .8em;
+    }
+
+    main > div {
+        width: 100%;
+        height: 100%;
+    }
+}
